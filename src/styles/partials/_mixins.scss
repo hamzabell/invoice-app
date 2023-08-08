@@ -1,0 +1,58 @@
+
+
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value
+    }
+}
+
+
+@mixin for-device($device) {
+    @if $device == mobile {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+
+
+    @if $device == tablet {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $device == desktop {
+        @media screen and (min-width: 1440px) {
+            @content;
+        }
+
+    }
+}
+
+//typography
+@mixin define-typo($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin heading-lg {
+    @include define-typo(bold, 26px, 33px);
+}
+
+
+@mixin heading-md {
+    @include define-typo(bold, 24px, 22px);
+}
+
+@mixin heading-sm {
+    @include define-typo(bold, 15px, 15px);
+}
+
+@mixin body {
+    @include define-typo(normal, 13px, 18px);
+}
+@mixin body-v {
+    @include define-typo(normal, 13px, 15px);
+}

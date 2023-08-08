@@ -1,0 +1,69 @@
+$purple-100: #7C5DFA;
+$purple-200: #9277FF;
+$blue-100: #DFE3FA;
+$blue-200: #888EB0;
+$blue-300: #7E88C3;
+$blue-400: #252945;
+$blue-500: #1E2139;
+$blue-600: #858BB2;
+$black-100: #0C0E16;
+$black-200: #141625;
+$red-100: #EC5757;
+$red-200: #FF9797;
+$grey-100: #F8F8FB;
+$white: #fff;
+$header-bg: #373B53;
+$profile-border: #494E6E;
+$paid: #33D69F;
+$pending: #FF8F00;
+$draft: #fff;
+$paid-bg: #33D69F10;
+$pending-bg: #FF8F0010;
+$draft-bg: #DFE3FA70;
+$edit-bg: #F9FAFE;
+$items-list-title: #777F98;
+
+
+
+$--bg: --bg;
+$--input-bg: --input-bg;
+$--input-border: --input-border;
+$--input-text: --input-text;
+$--input-label: --input-label;
+$--dropdown-bg: --dropdown-bg;
+$--edit: --edit;
+$--edit-color: --edit-color;
+$--total-bg: --total-bg;
+$--add-invoice-bg: --add-invoice-bg;
+$--total-text: --total-text;
+
+
+$light-theme: (
+    $--bg: $grey-100,
+    $--input-bg: $white,
+    $--input-border: $blue-100,
+    $--input-text: $black-100,
+    $--input-label: $blue-300,
+    $--dropdown-bg: $white,
+    $--edit: $edit-bg,
+    $--edit-color: $blue-300,
+    $--total-bg: $header-bg,
+    $--add-invoice-bg: $white,
+    $--total-text: $blue-100
+);
+
+$dark-theme: (
+    $--bg: $black-100,
+    $--input-bg: $blue-500,
+    $--input-border: $blue-400,
+    $--input-text: $white,
+    $--input-label: $blue-100,
+    $--dropdown-bg: $blue-400,
+    $--edit: $header-bg,
+    $--edit-color: $white,
+    $--total-bg: $black-100,
+    $--add-invoice-bg: $black-200,
+    $--total-text: $blue-300
+)
+
+
