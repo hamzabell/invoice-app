@@ -15,7 +15,7 @@
     <div class="button-group">
         <Button class="button-group__edit" kind="secondary" @click="$emit('edit')">Edit</Button>
         <Button class="button-group__delete" kind="danger" @click="$emit('delete')">Delete</Button>
-        <Button class="button-group__paid" kind="primary" :disabled="isPaid" @click="$emit('paid')" >Mark as Paid</Button>
+        <Button v-if="!isPaid" class="button-group__paid" kind="primary"  @click="$emit('paid')" >Mark as Paid</Button>
 
     </div>
 </template>

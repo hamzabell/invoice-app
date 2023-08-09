@@ -177,7 +177,7 @@
 
             </table>
 
-            <Button type="submit" :disabled="!meta.valid" @click="push({ name: '', quantity: 0, price: 0})" kind="secondary" class="invoice-form__button">+ Add New Item</Button>
+            <Button type="button" @click="push({ name: '', quantity: 0, price: 0})" kind="secondary" class="invoice-form__button">+ Add New Item</Button>
             
         </section>
     </form>
@@ -185,14 +185,14 @@
     <div class="invoice-form__actions">
         <div v-if="initialValues" class="invoice-form__actions-edit">
             <Button  kind="secondary" @click="$emit('close')">Cancel</Button>
-            <Button kind="primary" @click="$emit('edit', values)">Save Changes</Button>
+            <Button type="submit" :disabled="!meta.valid" kind="primary" @click="$emit('edit', values)">Save Changes</Button>
         </div>
         <div v-else class="invoice-form__actions-new">
             <Button kind="secondary" @click="$emit('close')">Discard</Button>
 
             <div class="group">
                 <Button  kind="secondary" @click="$emit('draft', values)">Save as Draft</Button>
-                <Button kind="primary" @click="$emit('save', values)">Save & Send</Button>
+                <Button type="submit" :disabled="!meta.valid" kind="primary" @click="$emit('save', values)">Save & Send</Button>
             </div>
 
         </div>
@@ -395,6 +395,7 @@
         &__items {
             margin-top: 3.5rem;
             margin-bottom: 8rem;
+            overflow-y: scroll;
 
             @include for-device(tablet){
                 margin-bottom: 0;
